@@ -17,7 +17,9 @@ class redis_client(object):
     def lenth(self):
         return self._db.llen(self.name)
     def getall(self):
-        return self._db.lrange(self.name,0,-1)
+        ips=self._db.lrange(self.name,0,-1)
+        self._db.ltrim(self.name,0,0)
+        return ips
     def removeall(self):
         self._db.ltrim(self.name,0,0)
     def quchong(self):
