@@ -12,7 +12,9 @@ IP_proxy搭建IP代理池
 2. 检测IP，并放入redis队列。
 3. 定时检测IP的数量和有效性。
 4. 利用flask建立API接口
-项目运行
+
+
+项目运行:
 ---
 1. 安装所需的模块
    pip install requirement
